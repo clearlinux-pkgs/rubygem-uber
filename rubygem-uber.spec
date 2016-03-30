@@ -4,21 +4,17 @@
 #
 Name     : rubygem-uber
 Version  : 0.0.13
-Release  : 5
+Release  : 6
 URL      : ttps://rubygems.org/downloads/uber-0.0.13.gem
 Source0  : ttps://rubygems.org/downloads/uber-0.0.13.gem
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
 BuildRequires : ruby
-BuildRequires : rubygem-activesupport
-BuildRequires : rubygem-bundler
 BuildRequires : rubygem-i18n
 BuildRequires : rubygem-minitest
 BuildRequires : rubygem-rake
 BuildRequires : rubygem-rdoc
-BuildRequires : rubygem-thread_safe
-BuildRequires : rubygem-tzinfo
 
 %description
 # Uber
@@ -51,89 +47,32 @@ cp -pa .%{_bindir}/* \
 %{buildroot}%{_bindir}/
 fi
 
-%check
-export http_proxy=http://127.0.0.1:9/
-export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
-pushd %{buildroot}%{gem_dir}/gems/uber-0.0.13
-ruby -v -I"lib:test" test*/test_*.rb
-ruby -v -I"lib:test" test*/*_test.rb
-popd
-
 
 %files
 %defattr(-,root,root,-)
-/usr/lib64/ruby/gems/2.2.0/cache/uber-0.0.13.gem
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Builder/ClassMethods/builds-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Builder/ClassMethods/cdesc-ClassMethods.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Builder/ClassMethods/class_builder-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Builder/Constant/build_class_for-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Builder/Constant/call-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Builder/Constant/cdesc-Constant.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Builder/Constant/new-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Builder/Constant/run_builder_block-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Builder/builders-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Builder/cdesc-Builder.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Builder/included-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Callable/cdesc-Callable.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Delegates/cdesc-Delegates.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Delegates/delegates-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/InheritableAttr/Clone/call-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/InheritableAttr/Clone/cdesc-Clone.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/InheritableAttr/Clone/uncloneable-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/InheritableAttr/cdesc-InheritableAttr.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/InheritableAttr/inherit_for-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/InheritableAttr/inheritable_attr-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/InheritableAttribute/cdesc-InheritableAttribute.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/InheritableAttribute/inherit_for-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/InheritableAttribute/inheritable_attr-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Options/Value/callable%21-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Options/Value/callable%3f-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Options/Value/cdesc-Value.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Options/Value/dynamic%3f-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Options/Value/evaluate-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Options/Value/evaluate_for-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Options/Value/method%21-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Options/Value/method%3f-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Options/Value/new-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Options/Value/proc%21-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Options/Value/proc%3f-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Options/cdesc-Options.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Options/dynamic%3f-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Options/eval-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Options/evaluate-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Options/evaluate_for-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Options/new-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Version/%3e%3d-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Version/%7e-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Version/cdesc-Version.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Version/new-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/Version/parse-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/Uber/cdesc-Uber.ri
-/usr/lib64/ruby/gems/2.2.0/doc/uber-0.0.13/ri/cache.ri
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/.gitignore
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/.travis.yml
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/CHANGES.md
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/Gemfile
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/Gemfile.lock
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/LICENSE
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/README.md
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/Rakefile
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/lib/uber.rb
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/lib/uber/builder.rb
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/lib/uber/callable.rb
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/lib/uber/delegates.rb
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/lib/uber/inheritable_attr.rb
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/lib/uber/options.rb
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/lib/uber/uber_version.rb
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/lib/uber/version.rb
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/test/builder_test.rb
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/test/delegates_test.rb
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/test/inheritable_attr_test.rb
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/test/inheritance_test.rb
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/test/options_test.rb
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/test/test_helper.rb
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/test/version_test.rb
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/test/zeugs.rb
-/usr/lib64/ruby/gems/2.2.0/gems/uber-0.0.13/uber.gemspec
-/usr/lib64/ruby/gems/2.2.0/specifications/uber-0.0.13.gemspec
+/usr/lib64/ruby/gems/2.3.0/cache/uber-0.0.13.gem
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/.gitignore
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/.travis.yml
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/CHANGES.md
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/Gemfile
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/LICENSE
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/README.md
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/Rakefile
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/lib/uber.rb
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/lib/uber/builder.rb
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/lib/uber/callable.rb
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/lib/uber/delegates.rb
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/lib/uber/inheritable_attr.rb
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/lib/uber/options.rb
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/lib/uber/uber_version.rb
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/lib/uber/version.rb
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/test/builder_test.rb
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/test/delegates_test.rb
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/test/inheritable_attr_test.rb
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/test/inheritance_test.rb
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/test/options_test.rb
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/test/test_helper.rb
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/test/version_test.rb
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/test/zeugs.rb
+/usr/lib64/ruby/gems/2.3.0/gems/uber-0.0.13/uber.gemspec
+/usr/lib64/ruby/gems/2.3.0/specifications/uber-0.0.13.gemspec
