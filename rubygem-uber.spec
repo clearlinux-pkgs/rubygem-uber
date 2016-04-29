@@ -4,7 +4,7 @@
 #
 Name     : rubygem-uber
 Version  : 0.0.13
-Release  : 7
+Release  : 8
 URL      : ttps://rubygems.org/downloads/uber-0.0.13.gem
 Source0  : ttps://rubygems.org/downloads/uber-0.0.13.gem
 Summary  : No detailed summary available
